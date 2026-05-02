@@ -34,8 +34,7 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
 
   const wrap = {
     width: '100%',
-    maxWidth: 1200,
-    margin: '0 auto',
+    minWidth: 0,
     background: palette.bg,
     color: palette.ink,
     fontFamily: f.body,
@@ -116,40 +115,27 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
         </div>
       </nav>
 
-      {/* HERO */}
+      {/* HERO (illustration column removed per request) */}
       <section style={{ ...sectionPad, paddingTop: 40, position: 'relative', zIndex: 2 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1.1fr 1fr', gap: 40, alignItems: 'center' }}>
-          <div>
-            <Hand size={32} color={palette.accent2}>~ now enrolling · immediate openings ~</Hand>
-            <h1 style={{ fontFamily: f.alt, fontSize: narrow ? 46 : 96, fontWeight: 300, lineHeight: 0.95, margin: '12px 0 20px', letterSpacing: -2 }}>
-              A soft place<br />to be{' '}
-              <span style={{ position: 'relative', display: 'inline-block' }}>
-                <span style={{ fontStyle: 'italic', color: palette.accent }}>little.</span>
-                <svg style={{ position: 'absolute', left: -10, right: -10, bottom: -12, width: 'calc(100% + 20px)' }} viewBox="0 0 200 20" preserveAspectRatio="none" height="14">
-                  <path d="M2 14 Q 50 4, 100 12 T 198 10" fill="none" stroke={palette.accent3} strokeWidth="4" strokeLinecap="round" />
-                </svg>
-              </span>
-            </h1>
-            <div style={{ fontFamily: f.alt, fontSize: 17, fontStyle: 'italic', color: palette.ink, marginBottom: 16, fontWeight: 500 }}>
-              Licensed family dayhome in Livingston NW Calgary
-            </div>
-            <p style={{ fontSize: 17, color: palette.inkSoft, maxWidth: 500, lineHeight: 1.55, margin: 0 }}>
-              Approved family dayhome serving <strong style={{ color: palette.ink, fontWeight: 600 }}>Livingston, Carrington, Evanston, Ambleton, Sage Hill, Panorama Hills &amp; Coventry Hills.</strong> For tiny humans aged 0–5.
-            </p>
-            <div style={{ display: 'flex', gap: 14, marginTop: 32, alignItems: 'center', flexWrap: 'wrap' }}>
-              <a href="#tour" style={{ background: palette.accent, color: '#fff', border: 'none', padding: '16px 30px', borderRadius: 999, fontWeight: 600, fontSize: 15, fontFamily: f.body, cursor: 'pointer', boxShadow: `0 6px 20px ${palette.accent}50`, textDecoration: 'none', display: 'inline-block' }}>Book a tour ✿</a>
-            </div>
+        <div>
+          <Hand size={32} color={palette.accent2}>~ now enrolling · immediate openings ~</Hand>
+          <h1 style={{ fontFamily: f.alt, fontSize: narrow ? 46 : 96, fontWeight: 300, lineHeight: 0.95, margin: '12px 0 20px', letterSpacing: -2, maxWidth: 900 }}>
+            A soft place<br />to be{' '}
+            <span style={{ position: 'relative', display: 'inline-block' }}>
+              <span style={{ fontStyle: 'italic', color: palette.accent }}>little.</span>
+              <svg style={{ position: 'absolute', left: -10, right: -10, bottom: -12, width: 'calc(100% + 20px)' }} viewBox="0 0 200 20" preserveAspectRatio="none" height="14">
+                <path d="M2 14 Q 50 4, 100 12 T 198 10" fill="none" stroke={palette.accent3} strokeWidth="4" strokeLinecap="round" />
+              </svg>
+            </span>
+          </h1>
+          <div style={{ fontFamily: f.alt, fontSize: 17, fontStyle: 'italic', color: palette.ink, marginBottom: 16, fontWeight: 500 }}>
+            Licensed family dayhome in Livingston NW Calgary
           </div>
-
-          <div style={{ position: 'relative', height: narrow ? 320 : 460 }}>
-            <div style={{ position: 'absolute', inset: 0, borderRadius: 32, background: `linear-gradient(180deg, ${palette.accent3}30 0%, ${palette.accent}25 60%, ${palette.leaf}30 100%)`, overflow: 'hidden', boxShadow: `0 12px 40px rgba(61,46,58,0.10)` }}>
-              <div style={{ position: 'absolute', top: 30, right: 40, opacity: 0.95 }}><Illos.Sun palette={palette} size={110} /></div>
-              <div style={{ position: 'absolute', top: 70, left: 30 }}><Illos.Cloud palette={palette} size={90} /></div>
-              <div style={{ position: 'absolute', bottom: 80, left: 20 }}><Illos.Tree palette={palette} size={140} /></div>
-              <div style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)' }}><Illos.House palette={palette} size={220} /></div>
-              <div style={{ position: 'absolute', bottom: 60, right: 10 }}><Illos.Tree palette={palette} size={110} /></div>
-              <div style={{ position: 'absolute', top: 180, right: 60, transform: 'rotate(20deg)' }}><Illos.Bird palette={palette} size={60} /></div>
-            </div>
+          <p style={{ fontSize: 17, color: palette.inkSoft, maxWidth: 640, lineHeight: 1.55, margin: 0 }}>
+            Approved family dayhome serving <strong style={{ color: palette.ink, fontWeight: 600 }}>Livingston, Carrington, Evanston, Ambleton, Sage Hill, Panorama Hills &amp; Coventry Hills.</strong> For tiny humans aged 0–5.
+          </p>
+          <div style={{ display: 'flex', gap: 14, marginTop: 32, alignItems: 'center', flexWrap: 'wrap' }}>
+            <a href="#tour" style={{ background: palette.accent, color: '#fff', border: 'none', padding: '16px 30px', borderRadius: 999, fontWeight: 600, fontSize: 15, fontFamily: f.body, cursor: 'pointer', boxShadow: `0 6px 20px ${palette.accent}50`, textDecoration: 'none', display: 'inline-block' }}>Book a tour ✿</a>
           </div>
         </div>
 
