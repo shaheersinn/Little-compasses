@@ -58,9 +58,9 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
     <span style={{ fontFamily: f.display, fontSize: size, color: color || palette.accent, fontWeight: 600, lineHeight: 1, ...style }}>{children}</span>
   );
 
-  // floating cloud bg shape
+  // floating cloud bg shape (stay behind main content)
   const CloudBg = ({ x, y, size, op = 0.4 }) => (
-    <div style={{ position: 'absolute', top: y, left: x, opacity: op, pointerEvents: 'none' }}>
+    <div style={{ position: 'absolute', top: y, left: x, opacity: op, pointerEvents: 'none', zIndex: 0 }}>
       <Illos.Cloud palette={{ ...palette, cloud: palette.paper, ink: palette.accent2 }} size={size} />
     </div>
   );
@@ -116,7 +116,7 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
       <CloudBg x={950} y={2600} size={140} op={0.5} />
 
       {/* NAV */}
-      <nav style={{ display: 'flex', flexDirection: narrow ? 'column' : 'row', alignItems: narrow ? 'stretch' : 'center', justifyContent: narrow ? 'flex-start' : 'space-between', padding: narrow ? '24px 24px' : '28px 72px', gap: narrow ? 20 : 0, position: 'relative', zIndex: 2 }}>
+      <nav style={{ display: 'flex', flexDirection: narrow ? 'column' : 'row', alignItems: narrow ? 'stretch' : 'center', justifyContent: narrow ? 'flex-start' : 'space-between', padding: narrow ? '24px 24px' : '28px 72px', gap: narrow ? 20 : 0, position: 'relative', zIndex: 4, background: palette.bg }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <Illos.Cloud palette={palette} size={50} />
           <div>
@@ -129,18 +129,57 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
             <a key={id} href={`#${id}`} style={{ color: 'inherit', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.15s' }} onMouseEnter={e => e.currentTarget.style.color = palette.accent} onMouseLeave={e => e.currentTarget.style.color = palette.inkSoft}>{label}</a>
           ))}
         </div>
-        <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap', justifyContent: narrow ? 'center' : 'flex-end' }}>
-          <a href={`tel:${SITE.contact.phoneTel}`} style={{ color: palette.ink, textDecoration: 'none', fontSize: 14, fontWeight: 600 }}>☎ {SITE.contact.phone}</a>
-          <a href="#tour" style={{ background: palette.accent, color: '#fff', border: 'none', padding: '12px 22px', borderRadius: 999, fontWeight: 600, fontSize: 14, fontFamily: f.body, cursor: 'pointer', boxShadow: `0 4px 16px ${palette.accent}50`, textDecoration: 'none', display: 'inline-block' }}>Book a tour ✿</a>
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: narrow ? 10 : 14, flexWrap: 'wrap', justifyContent: narrow ? 'center' : 'flex-end' }}>
+          <a
+            href={`tel:${SITE.contact.phoneTel}`}
+            style={{
+              color: palette.ink,
+              textDecoration: 'none',
+              fontWeight: 700,
+              fontFamily: f.body,
+              fontSize: narrow ? 15 : 16,
+              letterSpacing: '0.03em',
+              fontVariantNumeric: 'tabular-nums',
+              padding: narrow ? '8px 14px' : '10px 18px',
+              borderRadius: 999,
+              lineHeight: 1.2,
+              whiteSpace: 'nowrap',
+              background: palette.paper,
+              border: `1px solid ${palette.accent2}35`,
+              boxShadow: '0 2px 10px rgba(61,46,58,0.08)',
+            }}
+          >
+            ☎ {SITE.contact.phone}
+          </a>
+          <a
+            href="#tour"
+            style={{
+              background: palette.accent,
+              color: '#fff',
+              border: 'none',
+              padding: narrow ? '8px 18px' : '10px 22px',
+              borderRadius: 999,
+              fontWeight: 700,
+              fontSize: narrow ? 13 : 14,
+              fontFamily: f.body,
+              cursor: 'pointer',
+              boxShadow: `0 4px 16px ${palette.accent}50`,
+              textDecoration: 'none',
+              display: 'inline-block',
+              lineHeight: 1.2,
+            }}
+          >
+            Book a tour ✿
+          </a>
         </div>
       </nav>
 
       {/* HERO */}
-      <section style={{ ...sectionPad, paddingTop: 40, position: 'relative', zIndex: 2 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1.1fr 1fr', gap: 40, alignItems: 'center' }}>
-          <div>
+      <section style={{ ...sectionPad, paddingTop: 40, position: 'relative', zIndex: 3, background: palette.bg }}>
+        <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1.1fr 1fr', gap: narrow ? 32 : 56, alignItems: 'center' }}>
+          <div style={{ position: 'relative', zIndex: 2, minWidth: 0, paddingRight: narrow ? 0 : 8 }}>
             <Hand size={32} color={palette.accent2}>~ now enrolling · immediate openings ~</Hand>
-            <h1 style={{ fontFamily: f.alt, fontSize: narrow ? 46 : 96, fontWeight: 300, lineHeight: 0.95, margin: '12px 0 20px', letterSpacing: -2 }}>
+            <h1 style={{ fontFamily: f.alt, fontSize: narrow ? 46 : 96, fontWeight: 300, lineHeight: 1.02, margin: '12px 0 8px', letterSpacing: -2 }}>
               A soft place<br />to be{' '}
               <span style={{ position: 'relative', display: 'inline-block' }}>
                 <span style={{ fontStyle: 'italic', color: palette.accent }}>little.</span>
@@ -149,7 +188,21 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
                 </svg>
               </span>
             </h1>
-            <div style={{ fontFamily: f.alt, fontSize: 17, fontStyle: 'italic', color: palette.ink, marginBottom: 16, fontWeight: 500 }}>
+            <div
+              style={{
+                fontFamily: f.alt,
+                fontSize: narrow ? 16 : 17,
+                fontStyle: 'italic',
+                color: palette.ink,
+                marginTop: 16,
+                marginBottom: 16,
+                fontWeight: 500,
+                lineHeight: 1.45,
+                position: 'relative',
+                zIndex: 2,
+                maxWidth: narrow ? '100%' : 520,
+              }}
+            >
               Licensed family dayhome in Livingston NW Calgary
             </div>
             <p style={{ fontSize: 17, color: palette.inkSoft, maxWidth: 500, lineHeight: 1.55, margin: 0 }}>
@@ -160,10 +213,10 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
             </div>
           </div>
 
-          <div style={{ position: 'relative', height: narrow ? 320 : 460 }}>
+          <div style={{ position: 'relative', height: narrow ? 320 : 460, zIndex: 1, minWidth: 0 }}>
             <div style={{ position: 'absolute', inset: 0, borderRadius: 32, background: `linear-gradient(180deg, ${palette.accent3}30 0%, ${palette.accent}25 60%, ${palette.leaf}30 100%)`, overflow: 'hidden', boxShadow: `0 12px 40px rgba(61,46,58,0.10)` }}>
               <div style={{ position: 'absolute', top: 30, right: 40, opacity: 0.95 }}><Illos.Sun palette={palette} size={110} /></div>
-              <div style={{ position: 'absolute', top: 70, left: 30 }}><Illos.Cloud palette={palette} size={90} /></div>
+              <div style={{ position: 'absolute', top: 72, left: 52 }}><Illos.Cloud palette={palette} size={76} /></div>
               <div style={{ position: 'absolute', bottom: 80, left: 20 }}><Illos.Tree palette={palette} size={140} /></div>
               <div style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)' }}><Illos.House palette={palette} size={220} /></div>
               <div style={{ position: 'absolute', bottom: 60, right: 10 }}><Illos.Tree palette={palette} size={110} /></div>
