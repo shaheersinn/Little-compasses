@@ -79,15 +79,35 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
   return (
     <div style={wrap}>
       {/* ENROLLMENT BANNER — sticky, top of page */}
-      <div style={{ position: 'sticky', top: 0, zIndex: 50, background: `linear-gradient(90deg, ${palette.accent} 0%, ${palette.accent2} 100%)`, color: '#fff', padding: narrow ? '12px 16px' : '12px 32px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 20, fontSize: narrow ? 13 : 14, fontWeight: 600, boxShadow: `0 4px 20px ${palette.accent}40`, flexWrap: 'wrap' }}>
+      <div style={{ position: 'sticky', top: 0, zIndex: 50, background: `linear-gradient(90deg, ${palette.accent} 0%, ${palette.accent2} 100%)`, color: '#fff', padding: narrow ? '12px 16px' : '14px 28px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: narrow ? 14 : 28, fontWeight: 600, boxShadow: `0 4px 20px ${palette.accent}40`, flexWrap: 'wrap' }}>
         <style>{`@keyframes lp-pulse { 0%,100% { transform: scale(1); opacity: 1 } 50% { transform: scale(1.15); opacity: 0.85 } }`}</style>
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
           <span style={{ width: 10, height: 10, borderRadius: 5, background: palette.accent3, animation: 'lp-pulse 1.6s ease-in-out infinite', boxShadow: `0 0 0 4px ${palette.accent3}40` }} />
-          <span style={{ fontFamily: f.display, fontSize: 22, color: palette.accent3, fontWeight: 700 }}>Now enrolling</span>
-          <span style={{ opacity: 0.95 }}>· immediate openings ·</span>
+          <span style={{ fontFamily: f.display, fontSize: narrow ? 18 : 22, color: palette.accent3, fontWeight: 700 }}>Now enrolling</span>
+          <span style={{ opacity: 0.95, fontSize: narrow ? 13 : 14 }}>· immediate openings ·</span>
         </span>
-        <a href={`tel:${SITE.contact.phoneTel}`} style={{ color: '#fff', textDecoration: 'none', fontWeight: 700, background: 'rgba(255,255,255,0.18)', padding: '4px 12px', borderRadius: 999 }}>☎ {SITE.contact.phone}</a>
-        <a href="#tour" style={{ background: palette.paper, color: palette.accent, border: 'none', padding: '8px 18px', borderRadius: 999, fontWeight: 700, fontSize: 13, fontFamily: f.body, cursor: 'pointer', boxShadow: `0 2px 8px rgba(0,0,0,0.15)`, textDecoration: 'none' }}>Book a tour →</a>
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: narrow ? 10 : 14, flexWrap: 'wrap', justifyContent: 'center' }}>
+          <a
+            href={`tel:${SITE.contact.phoneTel}`}
+            style={{
+              color: '#fff',
+              textDecoration: 'none',
+              fontWeight: 700,
+              fontFamily: f.body,
+              fontSize: narrow ? 15 : 16,
+              letterSpacing: '0.03em',
+              fontVariantNumeric: 'tabular-nums',
+              background: 'rgba(255,255,255,0.18)',
+              padding: narrow ? '8px 14px' : '10px 18px',
+              borderRadius: 999,
+              lineHeight: 1.2,
+              whiteSpace: 'nowrap',
+            }}
+          >
+            ☎ {SITE.contact.phone}
+          </a>
+          <a href="#tour" style={{ background: palette.paper, color: palette.accent, border: 'none', padding: narrow ? '8px 16px' : '10px 20px', borderRadius: 999, fontWeight: 700, fontSize: narrow ? 13 : 14, fontFamily: f.body, cursor: 'pointer', boxShadow: `0 2px 8px rgba(0,0,0,0.15)`, textDecoration: 'none', lineHeight: 1.2 }}>Book a tour →</a>
+        </div>
       </div>
 
       <CloudBg x={80} y={400} size={140} op={0.5} />
@@ -204,7 +224,7 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
               <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <Illos.Child palette={palette} size={180} hair="#5a3a2a" shirt={palette.accent} />
               </div>
-              <Hand size={40} style={{ display: 'block', textAlign: 'center', marginTop: 8, color: palette.ink }}>~ Robin Cruz ~</Hand>
+              <Hand size={40} style={{ display: 'block', textAlign: 'center', marginTop: 8, color: palette.ink }}>~ Zakiyah ~</Hand>
               <div style={{ textAlign: 'center', fontSize: 11, color: palette.inkSoft, marginTop: 4, letterSpacing: 1 }}>OWNER · LICENSED EDUCATOR</div>
             </Bubble>
             <div style={{ position: 'absolute', top: -20, right: -10, transform: 'rotate(15deg)' }}><Illos.Heart palette={palette} size={50} /></div>
@@ -225,7 +245,7 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
           </div>
           <div>
             <Hand size={32} color={palette.accent2}>about your educator</Hand>
-            <H size={56} style={{ marginTop: 8 }}>Hi, I'm <span style={{ fontStyle: 'italic', color: palette.accent }}>Robin.</span></H>
+            <H size={56} style={{ marginTop: 8 }}>Hi, I'm <span style={{ fontStyle: 'italic', color: palette.accent }}>Zakiyah.</span></H>
             <p style={{ fontSize: 17, marginTop: 24, color: palette.inkSoft, lineHeight: 1.65 }}>{SITE.about.body}</p>
 
             {/* philosophy quote */}

@@ -18,7 +18,7 @@ export const SITE = {
   ],
   neighbourhoods: ['Livingston', 'Carrington', 'Evanston', 'Ambleton', 'Sage Hill', 'Panorama Hills', 'Coventry Hills'],
   about: {
-    name: "Hi, I'm Robin",
+    name: "Hi, I'm Zakiyah",
     role: 'Licensed Educator · Owner',
     eceLevel: 'ECE Level 3 (Early Childhood Development Supervisor)',
     yearsExperience: '9 years caring for children in Calgary',
@@ -106,7 +106,7 @@ export const SITE = {
     grantExplainer: 'The Alberta Affordability Grant is a flat-fee subsidy: the province pays the difference between our list price and the family fee directly to the agency. You qualify if your child is under kindergarten age and attends a licensed program — that\'s it. No income test for the flat fee. Sunshine Agency files the paperwork; you sign once at enrollment.',
   },
   testimonials: [
-    { quote: 'Robin is the reason our daughter says "outside please" before she says hello. She comes home tired, muddy, and so happy.', who: 'Priya & Dev', child: 'parents of Anika, 2' },
+    { quote: 'Zakiyah is the reason our daughter says "outside please" before she says hello. She comes home tired, muddy, and so happy.', who: 'Priya & Dev', child: 'parents of Anika, 2' },
     { quote: 'We toured eight dayhomes in the NW. This one had a kid up to her elbows in flour making "bird bread." We signed the next day.', who: 'The Nguyens', child: 'parents of Kai, 4' },
     { quote: 'Our son was so shy. Six weeks later he was leading the morning song. The transition support was unreal.', who: 'Hannah M.', child: 'mom of Theo, 3' },
   ],
@@ -127,7 +127,7 @@ export const SITE = {
     process: [
       { step: '1', label: 'Book a slot', desc: 'Pick a 20-minute Tues or Thurs at 1 pm.' },
       { step: '2', label: 'Walk the space', desc: 'Play room, nap room, kitchen, fenced yard.' },
-      { step: '3', label: 'Meet Robin', desc: 'Bring your questions — and your kid if you like.' },
+      { step: '3', label: 'Meet Zakiyah', desc: 'Bring your questions — and your kid if you like.' },
       { step: '4', label: 'Get the paperwork', desc: 'Sample forms, agency packet, grant info to take home.' },
     ],
   },
