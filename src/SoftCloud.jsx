@@ -58,9 +58,18 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
     <span style={{ fontFamily: f.display, fontSize: size, color: color || palette.accent, fontWeight: 600, lineHeight: 1, ...style }}>{children}</span>
   );
 
-  // floating cloud bg shape (stay behind main content)
-  const CloudBg = ({ x, y, size, op = 0.4 }) => (
-    <div style={{ position: 'absolute', top: y, left: x, opacity: op, pointerEvents: 'none', zIndex: 0 }}>
+  // floating cloud bg shape (`left` xor `right` from edge)
+  const CloudBg = ({ x, y, size, op = 0.4, right }) => (
+    <div
+      style={{
+        position: 'absolute',
+        top: y,
+        ...(right !== undefined ? { right } : { left: x }),
+        opacity: op,
+        pointerEvents: 'none',
+        zIndex: 1,
+      }}
+    >
       <Illos.Cloud palette={{ ...palette, cloud: palette.paper, ink: palette.accent2 }} size={size} />
     </div>
   );
@@ -110,13 +119,18 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
         </div>
       </div>
 
-      <CloudBg x={80} y={400} size={140} op={0.5} />
+      {/* soft clouds — top band (visible through transparent nav / hero) */}
+      <CloudBg x={narrow ? 6 : 48} y={88} size={118} op={0.48} />
+      <CloudBg right={narrow ? 10 : 64} y={96} size={132} op={0.42} />
+      <CloudBg x={narrow ? 24 : 200} y={228} size={92} op={0.34} />
+
+      <CloudBg x={80} y={380} size={140} op={0.5} />
       <CloudBg x={1000} y={800} size={180} op={0.4} />
       <CloudBg x={50} y={1900} size={160} op={0.4} />
       <CloudBg x={950} y={2600} size={140} op={0.5} />
 
-      {/* NAV */}
-      <nav style={{ display: 'flex', flexDirection: narrow ? 'column' : 'row', alignItems: narrow ? 'stretch' : 'center', justifyContent: narrow ? 'flex-start' : 'space-between', padding: narrow ? '24px 24px' : '28px 72px', gap: narrow ? 20 : 0, position: 'relative', zIndex: 4, background: palette.bg }}>
+      {/* NAV — transparent so floating clouds show through (page bg is wrap / body) */}
+      <nav style={{ display: 'flex', flexDirection: narrow ? 'column' : 'row', alignItems: narrow ? 'stretch' : 'center', justifyContent: narrow ? 'flex-start' : 'space-between', padding: narrow ? '24px 24px' : '28px 72px', gap: narrow ? 20 : 0, position: 'relative', zIndex: 4, background: 'transparent' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <Illos.Cloud palette={palette} size={50} />
           <div>
@@ -175,7 +189,7 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
       </nav>
 
       {/* HERO */}
-      <section style={{ ...sectionPad, paddingTop: 40, position: 'relative', zIndex: 3, background: palette.bg }}>
+      <section style={{ ...sectionPad, paddingTop: 40, position: 'relative', zIndex: 3, background: 'transparent' }}>
         <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1.1fr 1fr', gap: narrow ? 32 : 56, alignItems: 'center' }}>
           <div style={{ position: 'relative', zIndex: 2, minWidth: 0, paddingRight: narrow ? 0 : 8 }}>
             <Hand size={32} color={palette.accent2}>~ now enrolling · immediate openings ~</Hand>
