@@ -134,8 +134,8 @@ export const SITE = {
   contact: {
     address: 'Livingston Drive NE · Calgary, AB',
     community: 'Livingston, Calgary',
-    phone: '(403) 555-0142',
-    phoneTel: '+14035550142',
+    phone: '587-574-9885',
+    phoneTel: '+15875749885',
     email: 'hello@littleprairie.ca',
     hours: 'Mon–Fri · 7:00 am – 5:30 pm',
     agency: 'Sunshine Family Day Home Agency',
