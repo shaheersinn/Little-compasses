@@ -13,7 +13,6 @@ export const SITE = {
     { label: 'Licensed under Alberta ELCC Act', icon: 'shield' },
     { label: 'First Aid + CPR-C', icon: 'heart' },
     { label: 'Police + Vulnerable Sector + Child Intervention', icon: 'badge' },
-    { label: 'Affordability Grant Eligible — $326.25/mo', icon: 'leaf' },
   ],
   neighbourhoods: ['Livingston', 'Carrington', 'Evanston', 'Ambleton', 'Sage Hill', 'Panorama Hills', 'Coventry Hills'],
   about: {
@@ -91,18 +90,17 @@ export const SITE = {
   },
   rates: {
     headline: 'Plain & simple pricing',
-    sub: 'We\'re a contracted Affordability Grant provider. Most Livingston families pay the flat $326.25/month after the Alberta grant — grant paperwork is completed at enrollment.',
+    sub: 'Transparent monthly rates for Livingston families. Full details shared at your tour.',
     rows: [
-      { age: 'Full-time (5 days)', list: '$1,150 / mo', after: '$326.25 / mo' },
-      { age: 'Part-time (3 days)', list: '$780 / mo', after: '$230.00 / mo' },
-      { age: 'One-time registration', list: '', after: '$95 (one-time)' },
+      { age: 'Full-time (5 days)', price: '$326.25 / mo' },
+      { age: 'Part-time (3 days)', price: '$230.00 / mo' },
+      { age: 'One-time registration', price: '$95 (one-time)' },
     ],
     optional: [
       { item: 'Late pickup (after 5:30 pm)', cost: '$1/min' },
       { item: 'Field-trip materials fund', cost: '$10/mo (optional)' },
     ],
     foot: 'All rates include three home-cooked meals, two snacks, diapers (infants), field trips, art supplies & sunscreen. No registration deposit until your spot is confirmed.',
-    grantExplainer: 'The Alberta Affordability Grant is a flat-fee subsidy: the province pays the difference between our list price and the family fee. You qualify if your child is under kindergarten age and attends a licensed program — that\'s it. No income test for the flat fee. Grant paperwork is completed at enrollment.',
   },
   testimonials: [
     { quote: 'Zakiyah is the reason our daughter says "outside please" before she says hello. She comes home tired, muddy, and so happy.', who: 'Priya & Dev', child: 'parents of Anika, 2' },
@@ -112,7 +110,6 @@ export const SITE = {
   faq: [
     { q: 'What are your hours?', a: 'Monday–Friday, 7:00 am–5:30 pm. Closed weekends and all Alberta statutory holidays (New Year\'s, Family Day, Good Friday, Victoria Day, Canada Day, Heritage Day, Labour Day, Thanksgiving, Remembrance Day, Christmas Day, Boxing Day). A full closure calendar is shared at enrollment.' },
     { q: 'Are you licensed?', a: 'Yes — licensed family day home regulated under Alberta\'s Family Day Home Standards (ELCC Act). Inspections are on file and shared with families.' },
-    { q: 'How does the Affordability Grant work?', a: 'Most families pay the flat $326.25/month full-time fee. The Alberta Affordability Grant covers the remainder. There\'s no income test for the flat fee — eligibility is just: child under kindergarten age, attending a licensed program. Grant paperwork is completed at enrollment.' },
     { q: 'What\'s your sick child policy?', a: 'Children stay home with: fever ≥38°C, vomiting/diarrhea in the last 24 hours, undiagnosed rash, conjunctivitis, or any communicable illness. Return after 24 hours symptom-free without medication. We never charge for child sick days.' },
     { q: 'How many kids are here total?', a: 'Six children max. Usually two infants, two toddlers, two preschoolers — a true mixed-age family. Educator ratio 1:6 as per Alberta standards.' },
     { q: 'What should we bring on the first day?', a: 'Indoor shoes, full change of clothes (×2), labelled water bottle, a comfort item for nap, weather-appropriate outdoor gear, and any remaining enrollment forms. Diapers and meals are provided.' },
@@ -125,7 +122,7 @@ export const SITE = {
       { step: '1', label: 'Book a slot', desc: 'Pick a 20-minute Tues or Thurs at 1 pm.' },
       { step: '2', label: 'Walk the space', desc: 'Play room, nap room, kitchen, fenced yard.' },
       { step: '3', label: 'Meet Zakiyah', desc: 'Bring your questions — and your kid if you like.' },
-      { step: '4', label: 'Get the paperwork', desc: 'Sample forms and grant info to take home.' },
+      { step: '4', label: 'Get the paperwork', desc: 'Sample forms and enrollment info to take home.' },
     ],
   },
   contact: {
