@@ -460,7 +460,6 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
             <div style={{ marginTop: 20, padding: '14px 18px', background: palette.paper, borderRadius: 14, fontSize: 13, color: palette.inkSoft, lineHeight: 1.6 }}>
               <strong style={{ color: palette.ink }}>You qualify if:</strong> child is under kindergarten age, attending a licensed Alberta program. That's it.
             </div>
-            <div style={{ marginTop: 12, fontSize: 12, color: palette.inkSoft, fontStyle: 'italic' }}>Sunshine Family Day Home Agency files paperwork on your behalf at enrollment.</div>
           </Bubble>
         </div>
       </section>
@@ -552,7 +551,6 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
               ['Hours', SITE.contact.hours],
               ['Phone', SITE.contact.phone, `tel:${SITE.contact.phoneTel}`],
               ['Email', SITE.contact.email, `mailto:${SITE.contact.email}`],
-              ['Agency', SITE.contact.agency],
             ].map(([l, v, href]) => {
               const inner = (
                 <>
@@ -589,7 +587,7 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
       </section>
 
       <footer style={{ padding: narrow ? '24px 24px' : '24px 72px', background: palette.paper, borderTop: `1px solid ${palette.accent2}40`, display: 'flex', flexDirection: narrow ? 'column' : 'row', justifyContent: 'space-between', fontSize: 12, color: palette.inkSoft, position: 'relative', zIndex: 2, flexWrap: 'wrap', gap: 12 }}>
-        <div>© 2026 Little Compasses · {SITE.contact.agency} · Treaty 7</div>
+        <div>© 2026 Little Compasses · Treaty 7</div>
         <div>Licensed under the Alberta ELCC Act · made with ✿ in Calgary</div>
       </footer>
     </div>
