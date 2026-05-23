@@ -1,6 +1,11 @@
 /** Shared content — copy & data only (from design handoff `content.jsx`). */
 export const SITE = {
   name: 'Little Compasses',
+  logo: {
+    lockup: '/logo-lockup-horizontal-cream.png',
+    mark: '/logo-mark.png',
+    alt: 'Little Compasses — slow & steady, with all our hearts',
+  },
   tagline: 'Licensed family dayhome in Livingston NW Calgary',
   hero: {
     headline: 'A soft place\nto be little.',

@@ -131,13 +131,18 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
 
       {/* NAV — transparent so floating clouds show through (page bg is wrap / body) */}
       <nav style={{ display: 'flex', flexDirection: narrow ? 'column' : 'row', alignItems: narrow ? 'stretch' : 'center', justifyContent: narrow ? 'flex-start' : 'space-between', padding: narrow ? '24px 24px' : '28px 72px', gap: narrow ? 20 : 0, position: 'relative', zIndex: 4, background: 'transparent' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <Illos.Cloud palette={palette} size={50} />
-          <div>
-            <Hand size={32}>Little Compasses</Hand>
-            <div style={{ fontSize: 11, letterSpacing: 1.5, color: palette.inkSoft, marginTop: -2 }}>licensed dayhome · livingston nw</div>
-          </div>
-        </div>
+        <a href="#" style={{ display: 'flex', flexDirection: 'column', alignItems: narrow ? 'center' : 'flex-start', gap: 6, textDecoration: 'none', flexShrink: 0 }}>
+          <img
+            src={narrow ? SITE.logo.mark : SITE.logo.lockup}
+            alt={SITE.logo.alt}
+            width={narrow ? 56 : 280}
+            height={narrow ? 56 : 72}
+            style={{ display: 'block', width: narrow ? 56 : 'auto', height: narrow ? 56 : 72, maxWidth: narrow ? 56 : 'min(280px, 42vw)' }}
+          />
+          {!narrow && (
+            <div style={{ fontSize: 11, letterSpacing: 1.5, color: palette.inkSoft }}>licensed dayhome · livingston nw</div>
+          )}
+        </a>
         <div style={{ display: 'flex', gap: narrow ? 14 : 28, fontSize: 14, fontWeight: 500, color: palette.inkSoft, flexWrap: 'wrap', justifyContent: narrow ? 'center' : 'flex-start' }}>
           {[['About','about'],['Programs','programs'],['Day','day'],['Pricing','rates'],['Tour','tour'],['FAQ','faq']].map(([label, id]) => (
             <a key={id} href={`#${id}`} style={{ color: 'inherit', textDecoration: 'none', cursor: 'pointer', transition: 'color 0.15s' }} onMouseEnter={e => e.currentTarget.style.color = palette.accent} onMouseLeave={e => e.currentTarget.style.color = palette.inkSoft}>{label}</a>
@@ -587,9 +592,12 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
         </div>
       </section>
 
-      <footer style={{ padding: narrow ? '24px 24px' : '24px 72px', background: palette.paper, borderTop: `1px solid ${palette.accent2}40`, display: 'flex', flexDirection: narrow ? 'column' : 'row', justifyContent: 'space-between', fontSize: 12, color: palette.inkSoft, position: 'relative', zIndex: 2, flexWrap: 'wrap', gap: 12 }}>
-        <div>© 2026 Little Compasses · Treaty 7</div>
-        <div>Licensed under the Alberta ELCC Act · made with ✿ in Calgary</div>
+      <footer style={{ padding: narrow ? '24px 24px' : '24px 72px', background: palette.paper, borderTop: `1px solid ${palette.accent2}40`, display: 'flex', flexDirection: narrow ? 'column' : 'row', justifyContent: 'space-between', alignItems: narrow ? 'center' : 'center', fontSize: 12, color: palette.inkSoft, position: 'relative', zIndex: 2, flexWrap: 'wrap', gap: 16 }}>
+        <div style={{ display: 'flex', flexDirection: narrow ? 'column' : 'row', alignItems: 'center', gap: 14 }}>
+          <img src={SITE.logo.lockup} alt="" width={200} height={52} style={{ display: 'block', height: 52, width: 'auto', maxWidth: 200 }} aria-hidden />
+          <span>© 2026 Little Compasses · Treaty 7</span>
+        </div>
+        <div style={{ textAlign: narrow ? 'center' : 'right' }}>Licensed under the Alberta ELCC Act · made with ✿ in Calgary</div>
       </footer>
     </div>
   );
