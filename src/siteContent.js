@@ -22,7 +22,7 @@ export const SITE = {
     role: 'Licensed Educator · Owner',
     eceLevel: 'ECE Level 3 (Early Childhood Development Supervisor)',
     yearsExperience: '9 years caring for children in Calgary',
-    languages: ['English', 'Tagalog', 'a little French'],
+    languages: ['English', 'Hindi', 'Punjabi', 'Urdu'],
     body: "I've looked after little ones in Calgary for nine years — three of them right here in my Livingston home. I have an Early Learning & Child Care diploma from Bow Valley College and have completed the full Alberta Child Care Certification pathway to Level 3.",
     philosophy: '“Children learn the world by tasting it, climbing it, and asking it endless questions. My job is to keep the world safe enough that they can.”',
     family: '',
@@ -39,7 +39,7 @@ export const SITE = {
   schedule: [
     { time: '7:00', label: 'Doors open', note: 'soft arrivals + free play' },
     { time: '8:30', label: 'Family breakfast', note: 'always something warm' },
-    { time: '9:15', label: 'Circle + story', note: 'songs in English & a little French' },
+    { time: '9:15', label: 'Circle + story', note: 'songs in English, Hindi, Punjabi & Urdu' },
     { time: '9:45', label: 'Outside time', note: 'Nose Creek pathway / Livingston parks' },
     { time: '11:30', label: 'Lunch together', note: 'home-cooked, family-style' },
     { time: '12:30', label: 'Quiet rest', note: 'cots, lullabies, glow stars' },
@@ -61,7 +61,7 @@ export const SITE = {
       { title: 'Well-being', desc: 'Children feel safe, fed, rested and seen. Predictable rhythms, gentle transitions.' },
       { title: 'Play & playfulness', desc: 'Loose-parts, mud kitchen, dramatic play. Long uninterrupted blocks of self-directed play.' },
       { title: 'Communication & literacies', desc: 'Daily story circle, songs, mark-making, conversations during meals.' },
-      { title: 'Diversity & social responsibility', desc: 'Treaty 7 land acknowledgement, books reflecting our families, Tagalog & French sprinkled in.' },
+      { title: 'Diversity & social responsibility', desc: 'Treaty 7 land acknowledgement, books reflecting our families, Hindi, Punjabi & Urdu alongside English.' },
     ],
     structure: [
       { count: '6', label: 'children max' },
