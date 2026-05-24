@@ -477,7 +477,7 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
         <p style={{ fontSize: 16, color: palette.inkSoft, marginTop: 16, marginBottom: 32, maxWidth: 600 }}>{SITE.tour.intro}</p>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center', marginBottom: 48 }}>
           <a href={`tel:${SITE.contact.phoneTel}`} style={{ background: palette.accent, color: '#fff', padding: '14px 28px', borderRadius: 999, fontWeight: 600, fontSize: 14, textDecoration: 'none', boxShadow: `0 4px 14px ${palette.accent}40` }}>☎ Call {SITE.contact.phone}</a>
-          <span style={{ fontSize: 13, color: palette.inkSoft, fontStyle: 'italic' }}>Tours: Tues &amp; Thurs · 1:00 pm</span>
+          <span style={{ fontSize: 13, color: palette.inkSoft, fontStyle: 'italic' }}>{SITE.tour.scheduleNote}</span>
         </div>
 
         {/* inquiry form — primary action */}

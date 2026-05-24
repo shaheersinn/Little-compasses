@@ -119,12 +119,13 @@ export const SITE = {
     { q: 'How many kids are here total?', a: 'Six children max. Usually two infants, two toddlers, two preschoolers — a true mixed-age family. Educator ratio 1:6 as per Alberta standards.' },
     { q: 'What should we bring on the first day?', a: 'Indoor shoes, full change of clothes (×2), labelled water bottle, a comfort item for nap, weather-appropriate outdoor gear, and any remaining enrollment forms. Diapers and meals are provided.' },
     { q: 'What if my child has allergies?', a: 'Our kitchen is fully nut-free. We accommodate dairy, gluten, halal, vegetarian, and any documented allergy. EpiPens are stored per Alberta med-storage protocol and all educators are trained on administration.' },
-    { q: 'Can I drop in to visit?', a: 'After enrollment, anytime. Before enrollment, we run 20-minute tours Tuesdays & Thursdays at 1 pm during nap so you actually see the space. Book a slot below.' },
+    { q: 'Can I drop in to visit?', a: 'After enrollment, anytime. Before enrollment, book a 20-minute tour — available any time during our weekday hours (Monday–Friday, 7:00 am–5:30 pm). Weekend tours can be arranged by phone. Use the form below or call to schedule.' },
   ],
   tour: {
-    intro: 'Tours are 20 minutes, Tuesdays and Thursdays at 1 pm during nap so you can see the full space.',
+    intro: 'Tours are about 20 minutes so you can see the play room, nap space, kitchen, and yard. Weekdays: any time Monday–Friday during our working hours (7:00 am–5:30 pm). Weekends: by appointment — call ahead to arrange.',
+    scheduleNote: 'Mon–Fri · 7:00 am–5:30 pm · weekends by appointment',
     process: [
-      { step: '1', label: 'Book a slot', desc: 'Pick a 20-minute Tues or Thurs at 1 pm.' },
+      { step: '1', label: 'Book a time', desc: 'Call or send an inquiry — pick any weekday slot during hours, or arrange a weekend visit by phone.' },
       { step: '2', label: 'Walk the space', desc: 'Play room, nap room, kitchen, fenced yard.' },
       { step: '3', label: 'Meet Zakiyah', desc: 'Bring your questions — and your kid if you like.' },
       { step: '4', label: 'Get the paperwork', desc: 'Sample forms and enrollment info to take home.' },
