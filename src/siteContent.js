@@ -74,7 +74,7 @@ export const SITE = {
     ],
   },
   meals: {
-    intro: 'Three home-cooked meals a day, plus two snacks. Marco plans the menu on Sundays following the Canada Food Guide and we shop at the Crossroads Market.',
+    intro: 'Three home-cooked meals a day, plus two snacks. Weekly menus follow the Canada Food Guide and we shop at the Crossroads Market.',
     sample: [
       { day: 'Monday', breakfast: 'Steel-cut oats, berries', lunch: 'Lentil dahl, brown rice, naan', snack: 'Apple, sunflower butter' },
       { day: 'Tuesday', breakfast: 'Whole-grain pancakes', lunch: 'Chicken & barley soup, bun', snack: 'Cheese, cucumber, oat crackers' },
