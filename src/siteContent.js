@@ -102,7 +102,6 @@ export const SITE = {
       { age: 'One-time registration', price: '$95 (one-time)' },
     ],
     optional: [
-      { item: 'Late pickup (after 5:30 pm)', cost: '$1/min' },
       { item: 'Field-trip materials fund', cost: '$10/mo (optional)' },
     ],
     foot: 'All rates include three home-cooked meals, two snacks, diapers (infants), field trips, art supplies & sunscreen. No registration deposit until your spot is confirmed.',
