@@ -41,12 +41,11 @@ export const SITE = {
   },
   schedule: [
     { time: '7:00', label: 'Doors open', note: 'soft arrivals + free play' },
-    { time: '8:30', label: 'Family breakfast', note: 'always something warm' },
     { time: '9:15', label: 'Circle + story', note: 'songs in English, Hindi, Punjabi & Urdu' },
     { time: '9:45', label: 'Outside time', note: 'Nose Creek pathway / Livingston parks' },
-    { time: '11:30', label: 'Lunch together', note: 'home-cooked, family-style' },
+    { time: '11:30', label: 'Lunch together', note: 'one home-cooked meal, family-style' },
     { time: '12:30', label: 'Quiet rest', note: 'cots, lullabies, glow stars' },
-    { time: '14:30', label: 'Snack + project', note: 'craft, water table, baking' },
+    { time: '14:30', label: 'Afternoon project', note: 'craft, water table, baking' },
     { time: '15:30', label: 'Outside again', note: 'or messy play if it\'s a -30 day' },
     { time: '16:30', label: 'Wind-down', note: 'puzzles + parent pickup' },
     { time: '17:30', label: 'Doors close', note: 'see you tomorrow!' },
@@ -63,7 +62,7 @@ export const SITE = {
     pillars: [
       { title: 'Well-being', desc: 'Children feel safe, fed, rested and seen. Predictable rhythms, gentle transitions.' },
       { title: 'Play & playfulness', desc: 'Loose-parts, mud kitchen, dramatic play. Long uninterrupted blocks of self-directed play.' },
-      { title: 'Communication & literacies', desc: 'Daily story circle, songs, mark-making, conversations during meals.' },
+      { title: 'Communication & literacies', desc: 'Daily story circle, songs, mark-making, conversations during lunch.' },
       { title: 'Diversity & social responsibility', desc: 'Treaty 7 land acknowledgement, books reflecting our families, Hindi, Punjabi & Urdu alongside English.' },
     ],
     structure: [
@@ -74,13 +73,13 @@ export const SITE = {
     ],
   },
   meals: {
-    intro: 'Three home-cooked meals a day, plus two snacks. Weekly menus follow the Canada Food Guide and we shop at the Crossroads Market.',
+    intro: 'One home-cooked meal a day. Weekly menus follow the Canada Food Guide and we shop at the Crossroads Market.',
     sample: [
-      { day: 'Monday', breakfast: 'Steel-cut oats, berries', lunch: 'Lentil dahl, brown rice, naan', snack: 'Apple, sunflower butter' },
-      { day: 'Tuesday', breakfast: 'Whole-grain pancakes', lunch: 'Chicken & barley soup, bun', snack: 'Cheese, cucumber, oat crackers' },
-      { day: 'Wednesday', breakfast: 'Yogurt parfait', lunch: 'Veggie chili, cornbread', snack: 'Banana muffins' },
-      { day: 'Thursday', breakfast: 'Scrambled eggs, toast', lunch: 'Pasta marinara, peas', snack: 'Hummus, pita, carrots' },
-      { day: 'Friday', breakfast: 'Overnight oats', lunch: 'Halal chicken curry, rice', snack: 'Pear slices, cheddar' },
+      { day: 'Monday', lunch: 'Lentil dahl, brown rice, naan' },
+      { day: 'Tuesday', lunch: 'Chicken & barley soup, bun' },
+      { day: 'Wednesday', lunch: 'Veggie chili, cornbread' },
+      { day: 'Thursday', lunch: 'Pasta marinara, peas' },
+      { day: 'Friday', lunch: 'Halal chicken curry, rice' },
     ],
     notes: 'Nut-free kitchen. Halal and vegetarian options always available. We accommodate dairy, gluten, and any documented allergy.',
   },
@@ -104,7 +103,7 @@ export const SITE = {
     optional: [
       { item: 'Field-trip materials fund', cost: '$10/mo (optional)' },
     ],
-    foot: 'All rates include three home-cooked meals, two snacks, diapers (infants), field trips, art supplies & sunscreen. No registration deposit until your spot is confirmed.',
+    foot: 'All rates include one home-cooked meal, diapers (infants), field trips, art supplies & sunscreen. No registration deposit until your spot is confirmed.',
   },
   testimonials: [
     { quote: 'Zakiyah is the reason our daughter says "outside please" before she says hello. She comes home tired, muddy, and so happy.', who: 'Priya & Dev', child: 'parents of Anika, 2' },
@@ -116,7 +115,7 @@ export const SITE = {
     { q: 'Are you licensed?', a: 'Yes — licensed family day home regulated under Alberta\'s Family Day Home Standards (ELCC Act). Inspections are on file and shared with families.' },
     { q: 'What\'s your sick child policy?', a: 'Children stay home with: fever ≥38°C, vomiting/diarrhea in the last 24 hours, undiagnosed rash, conjunctivitis, or any communicable illness. Return after 24 hours symptom-free without medication. We never charge for child sick days.' },
     { q: 'How many kids are here total?', a: 'Six children max. Usually two infants, two toddlers, two preschoolers — a true mixed-age family. Educator ratio 1:6 as per Alberta standards.' },
-    { q: 'What should we bring on the first day?', a: 'Indoor shoes, full change of clothes (×2), labelled water bottle, a comfort item for nap, weather-appropriate outdoor gear, and any remaining enrollment forms. Diapers and meals are provided.' },
+    { q: 'What should we bring on the first day?', a: 'Indoor shoes, full change of clothes (×2), labelled water bottle, a comfort item for nap, weather-appropriate outdoor gear, and any remaining enrollment forms. Diapers and lunch are provided.' },
     { q: 'What if my child has allergies?', a: 'Our kitchen is fully nut-free. We accommodate dairy, gluten, halal, vegetarian, and any documented allergy. EpiPens are stored per Alberta med-storage protocol and all educators are trained on administration.' },
     { q: 'Can I drop in to visit?', a: 'After enrollment, anytime. Before enrollment, book a 20-minute tour — available everyday. Call ahead or use the form below to schedule.' },
   ],
