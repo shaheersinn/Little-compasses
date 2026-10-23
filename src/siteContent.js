@@ -98,12 +98,13 @@ export const SITE = {
     rows: [
       { age: 'Full-time (5 days)', price: '$326.25 / mo' },
       { age: 'Part-time (3 days)', price: '$230.00 / mo' },
+      { age: 'Sibling discount', price: '$100 / mo off' },
       { age: 'One-time registration', price: '$95 (one-time)' },
     ],
     optional: [
       { item: 'Field-trip materials fund', cost: '$10/mo (optional)' },
     ],
-    foot: 'All rates include one home-cooked meal, diapers (infants), field trips, art supplies & sunscreen. No registration deposit until your spot is confirmed.',
+    foot: 'All rates include one home-cooked meal, diapers (infants), field trips, art supplies & sunscreen. No registration deposit until your spot is confirmed. Sibling discount: $100 off each month for any sibling of a child already enrolled.',
   },
   testimonials: [
     { quote: 'Zakiyah is the reason our daughter says "outside please" before she says hello. She comes home tired, muddy, and so happy.', who: 'Priya & Dev', child: 'parents of Anika, 2' },
@@ -118,6 +119,7 @@ export const SITE = {
     { q: 'What should we bring on the first day?', a: 'Indoor shoes, full change of clothes (×2), labelled water bottle, a comfort item for nap, weather-appropriate outdoor gear, and any remaining enrollment forms. Diapers and lunch are provided.' },
     { q: 'What if my child has allergies?', a: 'Our kitchen is fully nut-free. We accommodate dairy, gluten, halal, vegetarian, and any documented allergy. EpiPens are stored per Alberta med-storage protocol and all educators are trained on administration.' },
     { q: 'Can I drop in to visit?', a: 'After enrollment, anytime. Before enrollment, book a 20-minute tour — available everyday. Call ahead or use the form below to schedule.' },
+    { q: 'Do you offer a sibling discount?', a: 'Yes — $100 off per month for any sibling of a child who is enrolled. The discount applies to each additional sibling\'s monthly tuition while a sibling remains enrolled.' },
   ],
   tour: {
     intro: 'Tours are about 20 minutes so you can see the play room, nap space, kitchen, and yard. Tours available everyday — call ahead.',
