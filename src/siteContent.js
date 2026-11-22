@@ -98,21 +98,6 @@ export const SITE = {
       { name: 'Backyard', desc: 'mud kitchen, sandbox, raised veggie beds' },
     ],
   },
-  rates: {
-    headline: 'Plain & simple pricing',
-    sub: 'Transparent monthly rates for Livingston families. New families get $100 off — full details shared at your tour.',
-    rows: [
-      { age: 'Full-time (5 days)', price: '$326.25 / mo' },
-      { age: 'Part-time (3 days)', price: '$230.00 / mo' },
-      { age: 'New family discount', price: '$100 off' },
-      { age: 'Sibling discount', price: '$100 / mo off' },
-      { age: 'One-time registration', price: '$95 (one-time)' },
-    ],
-    optional: [
-      { item: 'Field-trip materials fund', cost: '$10/mo (optional)' },
-    ],
-    foot: 'All rates include one home-cooked meal, diapers (infants), field trips, art supplies & sunscreen. No registration deposit until your spot is confirmed. New family discount: $100 off for new families. Sibling discount: $100 off each month for any sibling of a child already enrolled.',
-  },
   testimonials: [
     { quote: 'Zakiyah is the reason our daughter says "outside please" before she says hello. She comes home tired, muddy, and so happy.', who: 'Priya & Dev', child: 'parents of Anika, 2' },
     { quote: 'We toured eight dayhomes in the NW. This one had a kid up to her elbows in flour making "bird bread." We signed the next day.', who: 'The Nguyens', child: 'parents of Kai, 4' },
