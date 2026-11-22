@@ -88,12 +88,12 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
   return (
     <div style={wrap}>
       {/* DISCOUNT / ENROLLMENT BANNER — sticky, top of page (above nav) */}
-      <div style={{ position: 'sticky', top: 0, zIndex: 50, background: `linear-gradient(90deg, ${palette.accent} 0%, ${palette.accent2} 100%)`, color: '#fff', padding: narrow ? '12px 16px' : '14px 28px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: narrow ? 12 : 24, fontWeight: 600, boxShadow: `0 4px 20px ${palette.accent}40`, flexWrap: 'wrap' }}>
+      <div style={{ position: 'sticky', top: 0, zIndex: 50, background: `linear-gradient(90deg, ${palette.accent} 0%, ${palette.accent2} 100%)`, color: '#fff', padding: narrow ? '14px 16px' : '16px 28px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: narrow ? 12 : 24, fontWeight: 600, boxShadow: `0 4px 20px ${palette.accent}40`, flexWrap: 'wrap' }}>
         <style>{`@keyframes lp-pulse { 0%,100% { transform: scale(1); opacity: 1 } 50% { transform: scale(1.15); opacity: 0.85 } }`}</style>
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: narrow ? 8 : 10, flexWrap: 'wrap', justifyContent: 'center', textAlign: 'center' }}>
           <span style={{ width: 10, height: 10, borderRadius: 5, background: palette.accent3, animation: 'lp-pulse 1.6s ease-in-out infinite', boxShadow: `0 0 0 4px ${palette.accent3}40`, flexShrink: 0 }} />
-          <span style={{ fontFamily: f.display, fontSize: narrow ? 20 : 24, color: palette.accent3, fontWeight: 700, lineHeight: 1.15 }}>{SITE.announcement.primary}</span>
-          <span style={{ opacity: 0.95, fontSize: narrow ? 13 : 14, fontWeight: 500 }}>· {SITE.announcement.secondary}</span>
+          <span style={{ fontFamily: f.display, fontSize: narrow ? 28 : 36, color: palette.accent3, fontWeight: 700, lineHeight: 1.15 }}>{SITE.announcement.primary}</span>
+          <span style={{ opacity: 0.95, fontSize: narrow ? 15 : 17, fontWeight: 500 }}>· {SITE.announcement.secondary}</span>
         </span>
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: narrow ? 10 : 14, flexWrap: 'wrap', justifyContent: 'center' }}>
           <a
@@ -197,7 +197,7 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
       <section style={{ ...sectionPad, paddingTop: 40, position: 'relative', zIndex: 3, background: 'transparent' }}>
         <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1.1fr 1fr', gap: narrow ? 32 : 56, alignItems: 'center' }}>
           <div style={{ position: 'relative', zIndex: 2, minWidth: 0, paddingRight: narrow ? 0 : 8 }}>
-            <Hand size={32} color={palette.accent2}>{SITE.hero.hand}</Hand>
+            <Hand size={38} color={palette.accent2}>{SITE.hero.hand}</Hand>
             <h1 style={{ fontFamily: f.alt, fontSize: narrow ? 46 : 96, fontWeight: 300, lineHeight: 1.02, margin: '12px 0 8px', letterSpacing: -2 }}>
               A soft place<br />to be{' '}
               <span style={{ position: 'relative', display: 'inline-block' }}>
