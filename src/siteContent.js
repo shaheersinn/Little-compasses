@@ -99,19 +99,13 @@ export const SITE = {
     ],
   },
   rates: {
-    headline: 'Plain & simple pricing',
-    sub: 'Transparent monthly rates for Livingston families. New families get $100 off — full details shared at your tour.',
+    headline: 'A warm welcome for new families',
+    sub: 'New families get $100 off. Monthly rates and enrollment details are shared at your tour — no surprises, just a soft place to begin.',
     rows: [
-      { age: 'Full-time (5 days)', price: '$326.25 / mo' },
-      { age: 'Part-time (3 days)', price: '$230.00 / mo' },
       { age: 'New family discount', price: '$100 off' },
-      { age: 'Sibling discount', price: '$100 / mo off' },
-      { age: 'One-time registration', price: '$95 (one-time)' },
     ],
-    optional: [
-      { item: 'Field-trip materials fund', cost: '$10/mo (optional)' },
-    ],
-    foot: 'All rates include one home-cooked meal, diapers (infants), field trips, art supplies & sunscreen. No registration deposit until your spot is confirmed. New family discount: $100 off for new families. Sibling discount: $100 off each month for any sibling of a child already enrolled.',
+    optional: [],
+    foot: 'Care includes one home-cooked meal, diapers (infants), field trips, art supplies & sunscreen. Ask about the $100 new-family offer when you book a tour.',
   },
   testimonials: [
     { quote: 'Zakiyah is the reason our daughter says "outside please" before she says hello. She comes home tired, muddy, and so happy.', who: 'Priya & Dev', child: 'parents of Anika, 2' },
@@ -127,7 +121,6 @@ export const SITE = {
     { q: 'What if my child has allergies?', a: 'Our kitchen is fully nut-free. We accommodate dairy, gluten, halal, vegetarian, and any documented allergy. EpiPens are stored per Alberta med-storage protocol and all educators are trained on administration.' },
     { q: 'Can I drop in to visit?', a: 'After enrollment, anytime. Before enrollment, book a 20-minute tour — available everyday. Call ahead or use the form below to schedule.' },
     { q: 'Do you offer a discount for new families?', a: 'Yes — new families receive a $100 discount. Ask about it when you book a tour or send an inquiry.' },
-    { q: 'Do you offer a sibling discount?', a: 'Yes — $100 off per month for any sibling of a child who is enrolled. The discount applies to each additional sibling\'s monthly tuition while a sibling remains enrolled.' },
   ],
   tour: {
     intro: 'Tours are about 20 minutes so you can see the play room, nap space, kitchen, and yard. Tours available everyday — call ahead.',

@@ -264,7 +264,7 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
 
         {/* gentle stat row */}
         <div style={{ marginTop: 24, padding: narrow ? '20px 16px' : '24px 40px', background: palette.paper, borderRadius: narrow ? 28 : 999, display: 'flex', justifyContent: 'space-around', alignItems: 'center', flexWrap: 'wrap', gap: narrow ? 16 : 0, boxShadow: `0 8px 30px rgba(61,46,58,0.06)` }}>
-          {[['9', 'years caring'], ['6', 'tiny humans'], ['$326', '/month flat'], ['∞', 'cuddles']].map(([n, l], i) => (
+          {[['9', 'years caring'], ['6', 'tiny humans'], ['open', 'spots now'], ['∞', 'cuddles']].map(([n, l], i) => (
             <Fragment key={l}>
               <div style={{ textAlign: 'center' }}>
                 <div style={{ fontFamily: f.alt, fontSize: 32, fontStyle: 'italic', color: palette.accent }}>{n}</div>
@@ -443,7 +443,7 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
         <H size={56} style={{ marginTop: 8, marginBottom: 16 }}>{SITE.rates.headline}</H>
         <p style={{ fontSize: 16, color: palette.inkSoft, maxWidth: 700, marginBottom: 32, lineHeight: 1.6 }}>{SITE.rates.sub}</p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: narrow ? '1fr' : '1.2fr 1fr', gap: 32 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: narrow || !(SITE.rates.optional?.length) ? '1fr' : '1.2fr 1fr', gap: 32, maxWidth: SITE.rates.optional?.length ? undefined : 560 }}>
           <Bubble bg={palette.accent + '20'} style={{ borderRadius: 32, padding: 36 }}>
             <div style={{ background: palette.paper, borderRadius: 20, padding: 28, boxShadow: `0 6px 20px rgba(61,46,58,0.04)` }}>
               {SITE.rates.rows.map((r, i) => (
@@ -456,17 +456,19 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
             </div>
           </Bubble>
 
-          <Bubble bg={palette.accent3 + '30'} style={{ borderRadius: 32, padding: 36 }}>
-            <Hand size={28} color={palette.accent}>~ extras ~</Hand>
-            <div style={{ marginTop: 16, display: 'flex', flexDirection: 'column', gap: 14 }}>
-              {SITE.rates.optional.map((o) => (
-                <div key={o.item} style={{ display: 'flex', justifyContent: 'space-between', gap: 16, padding: '12px 16px', background: palette.paper, borderRadius: 14, fontSize: 14 }}>
-                  <span style={{ color: palette.ink }}>{o.item}</span>
-                  <span style={{ fontFamily: f.alt, fontStyle: 'italic', color: palette.accent, whiteSpace: 'nowrap' }}>{o.cost}</span>
-                </div>
-              ))}
-            </div>
-          </Bubble>
+          {SITE.rates.optional?.length > 0 && (
+            <Bubble bg={palette.accent3 + '30'} style={{ borderRadius: 32, padding: 36 }}>
+              <Hand size={28} color={palette.accent}>~ extras ~</Hand>
+              <div style={{ marginTop: 16, display: 'flex', flexDirection: 'column', gap: 14 }}>
+                {SITE.rates.optional.map((o) => (
+                  <div key={o.item} style={{ display: 'flex', justifyContent: 'space-between', gap: 16, padding: '12px 16px', background: palette.paper, borderRadius: 14, fontSize: 14 }}>
+                    <span style={{ color: palette.ink }}>{o.item}</span>
+                    <span style={{ fontFamily: f.alt, fontStyle: 'italic', color: palette.accent, whiteSpace: 'nowrap' }}>{o.cost}</span>
+                  </div>
+                ))}
+              </div>
+            </Bubble>
+          )}
         </div>
       </section>
 
