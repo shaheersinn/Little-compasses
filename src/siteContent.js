@@ -7,9 +7,15 @@ export const SITE = {
     alt: 'Little Compasses — slow & steady, with all our hearts',
   },
   tagline: 'Licensed family dayhome in Livingston NW Calgary',
+  announcement: {
+    primary: 'New families get $100 off',
+    secondary: 'now enrolling · immediate openings',
+    cta: 'Book a tour →',
+  },
   hero: {
     headline: 'A soft place\nto be little.',
     h1Seo: 'Licensed Dayhome in Livingston NW Calgary | Little Prairie',
+    hand: '~ new families get $100 off · now enrolling ~',
     sub: 'Approved family dayhome serving Livingston, Carrington, Evanston, Ambleton, Sage Hill, Panorama Hills & Coventry Hills.',
     cta: 'Book a tour',
     cta2: 'Join the waitlist',
