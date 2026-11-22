@@ -264,7 +264,7 @@ const SoftCloud = ({ theme = 'peachBlossom' }) => {
 
         {/* gentle stat row */}
         <div style={{ marginTop: 24, padding: narrow ? '20px 16px' : '24px 40px', background: palette.paper, borderRadius: narrow ? 28 : 999, display: 'flex', justifyContent: 'space-around', alignItems: 'center', flexWrap: 'wrap', gap: narrow ? 16 : 0, boxShadow: `0 8px 30px rgba(61,46,58,0.06)` }}>
-          {[['9', 'years caring'], ['6', 'tiny humans'], ['open', 'spots now'], ['∞', 'cuddles']].map(([n, l], i) => (
+          {[['9', 'years caring'], ['6', 'tiny humans'], ['$326', '/month flat'], ['∞', 'cuddles']].map(([n, l], i) => (
             <Fragment key={l}>
               <div style={{ textAlign: 'center' }}>
                 <div style={{ fontFamily: f.alt, fontSize: 32, fontStyle: 'italic', color: palette.accent }}>{n}</div>
